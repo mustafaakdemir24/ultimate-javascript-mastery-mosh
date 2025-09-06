@@ -1,6 +1,3 @@
-// Primitive Data Types
-let name = `Mosh`; // String Literal
-let age = 30; // Number Literal
-let isApproved = true; // Boolean Literal
-let firstName = undefined;
-let selectedColor = null;
+let selectedColors = ["red", "blue"];
+selectedColors[2] = 1;
+console.log(selectedColors.length);
