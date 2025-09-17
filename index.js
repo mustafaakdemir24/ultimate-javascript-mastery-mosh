@@ -1,12 +1,17 @@
-// Performing a task
-const greet = (firstName, lastName) => {
-  console.log(`Hello, ${firstName} ${lastName}!`);
-};
+let x = 10;
+let y = 3;
 
-// Calculating a value
-const square = (number) => {
-  return number * number;
-};
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
+console.log(x ** y);
 
-let number = square(2);
-console.log(number);
+// Increment (++)
+console.log(x++);
+console.log(x);
+
+// Decrement (--)
+console.log(x--);
+console.log(x);
