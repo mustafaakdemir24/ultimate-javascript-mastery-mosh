@@ -1,7 +1,10 @@
-// If customers hava more than 100 points,
-// they are 'gold' customers, otherwise,
-// they are 'silver' customer.
-let point = 90;
-let type = point > 100 ? "gold" : "silver";
+// Logical OR (||)
+// Returns TRUE if one of the operands is TRUE
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome || goodCreditScore;
+console.log(`Eligible ${eligibleForLoan}`);
 
-console.log(type);
+// NOT (!)
+let applicationRefused = !eligibleForLoan;
+console.log(`Application Refused ${applicationRefused}`);
