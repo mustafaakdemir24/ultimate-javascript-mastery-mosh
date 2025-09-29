@@ -1,15 +1,10 @@
-// for (let i = 5; i >= 1; i--) {
-//   if (i % 2 !== 0) console.log(i);
-// }
+// for-in
+const person = {
+  name: "Mosh",
+  age: 30,
+};
 
-// let i = 0;
-// while (i <= 5) {
-//   if (i % 2 !== 0) console.log(i);
-//   i++;
-// }
+for (let key in person) console.log(key, person[key]);
 
-let i = 9;
-do {
-  if (i % 2 !== 0) console.log(i);
-  i++;
-} while (i <= 5);
+const colors = ["red", "green", "blue"];
+for (let index in colors) console.log(index, colors[index]);
