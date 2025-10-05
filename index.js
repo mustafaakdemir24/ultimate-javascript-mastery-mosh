@@ -1,9 +1,5 @@
-const maxOfTwoNumbers = (a, b) => {
-  // if (a > b) return a;
-  // return b;
-
-  return a > b ? a : b;
+const isLandscape = (width, height) => {
+  return width > height;
 };
 
-console.log(maxOfTwoNumbers(13, 11));
-console.log(maxOfTwoNumbers(9464, 18498));
+console.log(isLandscape(112, 180));
