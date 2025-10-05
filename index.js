@@ -1,11 +1,9 @@
-let i = 0;
-while (i <= 10) {
-  // if (i === 5) break;
-  if (i % 2 === 0) {
-    i++;
-    continue;
-  }
+const maxOfTwoNumbers = (a, b) => {
+  // if (a > b) return a;
+  // return b;
 
-  console.log(i);
-  i++;
-}
+  return a > b ? a : b;
+};
+
+console.log(maxOfTwoNumbers(13, 11));
+console.log(maxOfTwoNumbers(9464, 18498));
