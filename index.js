@@ -1,17 +1,11 @@
-// Speed Limit = 70
-// 5 -> 1 point
-// Math.floor(1.3)
-//  12 points -> suspended
+const showNumbers = (limit) => {
+  for (let i = 0; i <= limit; i++) {
+    // if (i % 2 === 0) console.log(`${i} "EVEN"`);
+    // else console.log(`${i} "ODD"`);
 
-const checkSpeed = (speed) => {
-  const speedLimit = 70;
-  const kmPerPoint = 5;
-
-  if (speed < speedLimit + kmPerPoint) return "Ok";
-
-  const points = Math.floor((speed - speedLimit) / 5);
-  if (points >= 12) return "Licence suspended";
-  return `Point: ${points}`;
+    const message = i % 2 === 0 ? `${i} "EVEN"` : `${i} "ODD"`;
+    console.log(message);
+  }
 };
 
-console.log(checkSpeed(130));
+showNumbers(11);
