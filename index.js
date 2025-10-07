@@ -1,11 +1,19 @@
-const showNumbers = (limit) => {
-  for (let i = 0; i <= limit; i++) {
-    // if (i % 2 === 0) console.log(`${i} "EVEN"`);
-    // else console.log(`${i} "ODD"`);
+// Falsy
+// undefined
+// null
+// ''
+// false
+// 0
+// NaN
 
-    const message = i % 2 === 0 ? `${i} "EVEN"` : `${i} "ODD"`;
-    console.log(message);
+const countTruty = (array) => {
+  let trutyCount = 0;
+  for (let item of array) {
+    if (item) trutyCount++;
   }
+  return trutyCount;
 };
 
-showNumbers(11);
+console.log(
+  countTruty([undefined, 1, "Mosh", false, true, 0, "Mustafa", NaN, ""])
+);
