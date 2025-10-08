@@ -1,19 +1,13 @@
-// Falsy
-// undefined
-// null
-// ''
-// false
-// 0
-// NaN
-
-const countTruty = (array) => {
-  let trutyCount = 0;
-  for (let item of array) {
-    if (item) trutyCount++;
-  }
-  return trutyCount;
+const movie = {
+  title: "a",
+  releaseYear: 2015,
+  rating: 4.5,
+  director: "b",
 };
 
-console.log(
-  countTruty([undefined, 1, "Mosh", false, true, 0, "Mustafa", NaN, ""])
-);
+const showProperties = (obj) => {
+  for (let key in obj)
+    if (typeof obj[key] === "string") console.log(key, obj[key]);
+};
+
+showProperties(movie);
