@@ -1,8 +1,26 @@
-const sum = (limit) => {
-  let sum = 0;
-  for (let i = 1; i <= limit; i++) if (i % 3 === 0 || i % 5 === 0) sum += i;
+const marks = [80, 80, 50];
 
-  return sum;
+// 0 - 59: F
+// 60 - 59: D
+// 70 - 79: C
+// 80 - 89: B
+// 90 - 100: A
+
+const calculateGrade = (marks) => {
+  const average = calculateAverage(marks);
+
+  if (average < 60) return "F";
+  if (average < 70) return "D";
+  if (average < 80) return "C";
+  if (average < 90) return "D";
+  return "A";
 };
 
-console.log(sum(10));
+const calculateAverage = (array) => {
+  let sum = 0;
+  for (let item of array) sum += item;
+
+  return sum / array.length;
+};
+
+console.log(calculateGrade(marks));
