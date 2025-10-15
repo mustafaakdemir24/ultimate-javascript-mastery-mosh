@@ -1,8 +1,11 @@
-let x = {};
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = () => {
+    console.log("draw");
+  };
+}
 
-// let x = new Object() --> Built-in constructor
+Circle.call({}, 1);
+Circle.apply({}, [1, 2, 3]);
 
-// Some built-in constructors in JavaScript
-new String(); // '', "", ``
-new Boolean(); // true, false
-new Number(); // 1, 2, 3, ...
+const another = new Circle(1);
