@@ -1,23 +1,15 @@
-// Prime (whose factors are only 1 and itself)
-// Composite
+// Object-oriented Programming (OOP)
 
-// 12 = 1, 2, 3, 4, 6, 12
-// Can be divided evenly by its factors
-
-// 11 = 1, 11
-// 13 = 1, 13
-
-const showPrimes = (limit) => {
-  for (let number = 2; number <= limit; number++) {
-    let isPrime = true;
-    for (let factor = 2; factor < number; factor++) {
-      if (number % factor === 0) {
-        isPrime = false;
-        break;
-      }
-    }
-    if (isPrime) console.log(number);
-  }
+const circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1,
+  },
+  isVisible: true,
+  draw: function () {
+    console.log("Draw");
+  },
 };
 
-showPrimes(20);
+circle.draw(); // Method
