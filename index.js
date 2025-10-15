@@ -1,11 +1,8 @@
-const circle = {
-  radius: 1,
-};
+let x = {};
 
-circle.color = "yellow";
-circle.draw = () => {};
+// let x = new Object() --> Built-in constructor
 
-delete circle.color;
-delete circle.draw;
-
-console.log(circle);
+// Some built-in constructors in JavaScript
+new String(); // '', "", ``
+new Boolean(); // true, false
+new Number(); // 1, 2, 3, ...
