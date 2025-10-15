@@ -1,21 +1,11 @@
-// Factory Function
-const createCircle = (radius) => {
-  return {
-    radius,
-    draw() {
-      console.log("draw");
-    },
-  };
+const circle = {
+  radius: 1,
 };
 
-const myCircle = createCircle(1);
+circle.color = "yellow";
+circle.draw = () => {};
 
-// Constructor Function
-const Circle = (radius) => {
-  this.radius = radius;
-  this.draw = () => {
-    console.log("Draw!");
-  };
-};
+delete circle.color;
+delete circle.draw;
 
-const circle = new Circle(1);
+console.log(circle);
