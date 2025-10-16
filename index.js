@@ -1,11 +1,9 @@
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = () => {
-    console.log("draw");
-  };
-}
+let obj = { value: 10 };
 
-Circle.call({}, 1);
-Circle.apply({}, [1, 2, 3]);
+const increase = (obj) => {
+  obj.value++;
+};
 
-const another = new Circle(1);
+increase(obj);
+
+console.log(obj);
