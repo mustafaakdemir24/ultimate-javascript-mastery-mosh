@@ -1,5 +1,9 @@
-// String primitive
-const message = "This is my\n first message";
+const name = "John";
+const message = "Hi " + name + "\n";
 
-// String object
-const another = new String("hi");
+const another = `Hi ${name} ${2 + 3},
+
+Thank you for joining my mailing list.
+
+Regards,
+Mosh`;
