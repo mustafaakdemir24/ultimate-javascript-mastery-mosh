@@ -1,11 +1,17 @@
-const address = {
-  street: "Zeki Pasa Cad.",
-  city: "Erzincan",
-  zipCode: 24182,
+// Factory Function
+const createAddress = (street, city, zipCode) => {
+  return {
+    street,
+    city,
+    zipCode,
+  };
 };
 
-const showAddress = (address) => {
-  for (let entry of Object.entries(address)) console.log(entry);
-};
+// Constructor Function
+function Address(street, city, zipCode) {
+  (this.street = street), (this.city = city), (this.zipCode = zipCode);
+}
 
-showAddress(address);
+const address = new Address("Zeki Pasa Cad.", "Erzincan", "24182");
+
+console.log(address);
