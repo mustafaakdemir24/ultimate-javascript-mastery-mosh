@@ -1,9 +1,5 @@
-const name = "John";
-const message = "Hi " + name + "\n";
+const now = new Date();
+const date1 = new Date("May 11 2018 09:00");
+const date2 = new Date(2018, 4, 11, 9);
 
-const another = `Hi ${name} ${2 + 3},
-
-Thank you for joining my mailing list.
-
-Regards,
-Mosh`;
+now.setFullYear(2017);
