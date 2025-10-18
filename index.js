@@ -1,5 +1,11 @@
-const now = new Date();
-const date1 = new Date("May 11 2018 09:00");
-const date2 = new Date(2018, 4, 11, 9);
+const address = {
+  street: "Zeki Pasa Cad.",
+  city: "Erzincan",
+  zipCode: 24182,
+};
 
-now.setFullYear(2017);
+const showAddress = (address) => {
+  for (let entry of Object.entries(address)) console.log(entry);
+};
+
+showAddress(address);
