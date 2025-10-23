@@ -1,22 +1,7 @@
-// Blog Post Object
-// title
-// body
-// author
-// views
-// comments
-//    (author, body)
-// isLive
+let priceRanges = [
+  { label: "$", toottip: "Inexpensive", minPerPerson: 0, maxPerPerson: 10 },
+  { label: "$$", tooltip: "Moderate", minPerPerson: 11, maxPerPerson: 20 },
+  { label: "$$$", toottip: "Expensive", minPerPerson: 21, maxPerPerson: 50 },
+];
 
-// BlogPost Constructor Function
-function BlogPost(title, body, author) {
-  this.title = title;
-  this.body = body;
-  this.author = author;
-  this.views = 0;
-  this.comments = [];
-  this.isLive = false;
-}
-
-const post = new BlogPost("a", "b", "c");
-
-console.log(post);
+let restaurants = [{ averagePerPerson: 5 }];
