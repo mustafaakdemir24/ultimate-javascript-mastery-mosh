@@ -7,22 +7,16 @@
 //    (author, body)
 // isLive
 
-const blogPost = {
-  title: "Ultimate JavaScript Course",
-  body: "The ultimate JavaScript course by Mosh Hamedani",
-  author: "Moshfeg Hamedani",
-  views: 11,
-  comments: [
-    {
-      author: "Mustafa Akdemir",
-      body: "Great JavaScript course by Mosh Hamedani",
-    },
-    {
-      author: "a",
-      body: "b",
-    },
-  ],
-  isLive: true,
-};
+// BlogPost Constructor Function
+function BlogPost(title, body, author) {
+  this.title = title;
+  this.body = body;
+  this.author = author;
+  this.views = 0;
+  this.comments = [];
+  this.isLive = false;
+}
 
-console.log(blogPost);
+const post = new BlogPost("a", "b", "c");
+
+console.log(post);
