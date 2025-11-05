@@ -1,12 +1,12 @@
-const courses = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-];
+const numbers = [1, 2, 3, 4];
 
-const course = courses.find((course) => course.name === "a");
+// End
+const last = numbers.pop();
 
-console.log(course);
+// Beginning
+const first = numbers.shift();
+console.log(first);
 
-const index = courses.findIndex((course) => course.name === "a");
-
-console.log(index);
+// Middle
+numbers.splice(1, 2);
+console.log(numbers);
