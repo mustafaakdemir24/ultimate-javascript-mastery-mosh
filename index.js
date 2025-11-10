@@ -1,18 +1,10 @@
-const courses = [
-  { id: 1, name: "Node.js" },
-  { id: 2, name: "javaScript" },
-];
+const numbers = [1, -1, 2, 3];
 
-courses.sort((a, b) => {
-  // a < b => -1
-  // a > b => 1
-  // a === b => 0
-  const nameA = a.name.toLowerCase();
-  const nameB = b.name.toLowerCase();
+// every()
+// some()
 
-  if (nameA > nameB) return 1;
-  if (nameA < nameB) return -1;
-  return 0;
+const atLeastOnePositive = numbers.some((value) => {
+  return value >= 0;
 });
 
-console.log(courses);
+console.log(atLeastOnePositive);
