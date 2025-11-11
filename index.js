@@ -1,9 +1,18 @@
 const numbers = [1, -1, 2, 3];
 
-const items = numbers
-  .filter((n) => n >= 0)
-  .map((n) => ({ value: n }))
-  .filter((obj) => obj.value > 1)
-  .map((obj) => obj.value);
+// a = 0, c = 1 => a =1
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
 
-console.log(items);
+// a = 1, c = -1 => a = 0
+// a = 1, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
+const sum1 = numbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+);
+
+console.log(sum1);
