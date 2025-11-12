@@ -1,14 +1,10 @@
-const arrayFromRange = (min, max) => {
-  const nums = new Array();
-
-  while (min <= max) {
-    nums.push(min);
-    min++;
+const includes = (array, searchElement) => {
+  for (let item of array) {
+    if (searchElement === item) return true;
   }
-
-  return nums;
+  return false;
 };
 
-const numbers = arrayFromRange(1, -4);
+const numbers = [1, 2, 3, 4];
 
-console.log(numbers);
+console.log(includes(numbers, 4));
