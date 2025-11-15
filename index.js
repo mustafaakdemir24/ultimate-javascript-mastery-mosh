@@ -1,18 +1,19 @@
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 1];
 
-const move = (array, index, offset) => {
-  const position = index + offset;
-  if (position >= array.length || position < 0) {
-    console.error("Invalid offset");
-    return;
-  }
-
-  const output = [...array];
-  const element = output.splice(index, 1)[0];
-  output.splice(position, 0, element);
-  return output;
+const countOccurences = (array, searchElement) => {
+  let count = 0;
+  for (let element of array) if (element === searchElement) count++;
+  return count;
 };
 
-const output = move(numbers, 3, -2);
+const countOccurencesReduce = (array, searchElement) => {
+  return array.reduce((accumulator, current) => {
+    const occurrence = current === searchElement ? 1 : 0;
+    console.log(accumulator, current, searchElement);
+    return accumulator + occurrence;
+  }, 0);
+};
 
-console.log(output);
+const count = countOccurencesReduce(numbers, 1);
+
+console.log(count);
