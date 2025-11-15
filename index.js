@@ -1,10 +1,15 @@
-const includes = (array, searchElement) => {
-  for (let item of array) {
-    if (searchElement === item) return true;
+const numbers = [1, 2, 3, 4, 1, 1];
+
+const except = (array, excluded) => {
+  const output = new Array();
+
+  for (let element of array) {
+    if (!excluded.includes(element)) output.push(element);
   }
-  return false;
+
+  return output;
 };
 
-const numbers = [1, 2, 3, 4];
+const output = except(numbers, [1, 2, 3]);
 
-console.log(includes(numbers, 4));
+console.log(output);
