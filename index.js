@@ -1,13 +1,7 @@
-// Function Declaration
-walk();
-
-function walk() {
-  console.log("walk");
+function sum() {
+  let total = 0;
+  for (let value of arguments) total += value;
+  return total;
 }
 
-// Anonymous Function Expression
-run();
-
-let run = function () {
-  console.log("run");
-};
+console.log(sum(1, 2, 3, 4, 5, 10));
