@@ -5,14 +5,20 @@ const person = {
     return `${person.firstName} ${person.lastName}`;
   },
   set fullName(value) {
+    if (typeof value !== "string") throw new Error("Value is mot a string.");
+
     const parts = value.split(" ");
-    (this.firstName = parts[0]), (this.lastName = parts[1]);
+    if (parts.length !== 2) throw new Error("Enter a first and last name.");
+
+    this.firstName = parts[0];
+    this.lastName = parts[1];
   },
 };
 
-person.fullName = "John Smith";
-
-// getters => access properties
-// setters => change (mutate) them
+try {
+  person.fullName = "";
+} catch (e) {
+  alert(e);
+}
 
 console.log(person);
