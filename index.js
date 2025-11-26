@@ -1,18 +1,15 @@
-function start() {
-  for (var i = 0; i < 5; i++) {
-    if (true) {
-      let color = "red";
-    }
-  }
+// method -> obj
+// function -> global (window, global)
 
-  console.log(color);
-}
+const video = {
+  title: "a",
+  play() {
+    console.log(this);
+  },
+};
 
-var color = "red";
-let age = 30;
+video.stop = function () {
+  console.log(this);
+};
 
-function sayHi() {
-  console.log("Hi!");
-}
-
-start();
+video.stop();
