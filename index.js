@@ -8,8 +8,16 @@ const video = {
   },
 };
 
-video.stop = function () {
+// Regular function
+function playVodeo() {
   console.log(this);
-};
+}
 
-video.stop();
+// Constructor function
+function Video(title) {
+  this.title = title;
+  console.log(this);
+}
+
+playVodeo(); // references -> global (Window, global)
+const v = new Video("b"); // references -> {}
